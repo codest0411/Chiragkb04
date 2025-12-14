@@ -513,6 +513,31 @@
   margin-bottom: 6px;
 }
 
+.blog-detail {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.blog-detail-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 14px;
+}
+
+.blog-detail-body {
+  min-width: 0;
+}
+
+.blog-detail-title {
+  font-size: clamp(1.2rem, 5vw, 2rem);
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
 .blog-title {
   font-size: 1rem;
   font-weight: 600;
@@ -560,6 +585,9 @@
   border-radius: 10px;
   padding: 12px 14px;
   white-space: pre-wrap;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
   line-height: 1.5;
   overflow-x: auto;
 }
@@ -766,6 +794,10 @@
     width: 100%;
     display: flex;
     justify-content: center;
+  }
+
+  .card.blog-detail {
+    padding: 18px;
   }
 
   .contact-right {
