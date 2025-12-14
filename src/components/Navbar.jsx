@@ -21,7 +21,7 @@ const Navbar = ({ active, onChange }) => {
           alt="Chirag portfolio logo"
           className="navbar-logo-image"
         />
-        <span>Chirag&apos;s Portfolio</span>
+        <span>Chirag.dev</span>
       </div>
       <button
         type="button"
