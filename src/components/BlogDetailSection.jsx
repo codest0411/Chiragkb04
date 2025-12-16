@@ -1,5 +1,10 @@
 import useSWR from 'swr';
 import { fetcher } from '../lib/api.js';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeHighlight from 'rehype-highlight';
+import 'github-markdown-css/github-markdown.css';
+import 'highlight.js/styles/github.css';
 
 const formatDate = (value) => {
   if (!value) return '';
@@ -66,10 +71,26 @@ const BlogDetailSection = ({ blogId }) => {
           {blog.readme ? (
             <div className="blog-readme-wrapper">
               <h3 className="blog-readme-title">README</h3>
-              <pre className="blog-readme">{blog.readme}</pre>
+              <div className="markdown-body">
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  rehypePlugins={[rehypeHighlight]}
+                >
+                  {blog.readme}
+                </ReactMarkdown>
+              </div>
             </div>
           ) : (
-            blog.content && <p className="edu-desc">{blog.content}</p>
+            blog.content && (
+              <div className="markdown-body">
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  rehypePlugins={[rehypeHighlight]}
+                >
+                  {blog.content}
+                </ReactMarkdown>
+              </div>
+            )
           )}
         </div>
       </div>
