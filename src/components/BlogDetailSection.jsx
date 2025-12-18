@@ -85,7 +85,7 @@ const BlogDetailSection = ({ blogId }) => {
               <div className="markdown-body">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
-                  rehypePlugins={[rehypeHighlight]}
+                  rehypePlugins={[rehypeRaw, rehypeHighlight]}
                 >
                   {blog.content}
                 </ReactMarkdown>

@@ -684,6 +684,21 @@
   padding: 8px 12px;
 }
 
+.markdown-body table td[align='center'],
+.markdown-body table th[align='center'] {
+  text-align: center;
+}
+
+.markdown-body table td[align='left'],
+.markdown-body table th[align='left'] {
+  text-align: left;
+}
+
+.markdown-body table td[align='right'],
+.markdown-body table th[align='right'] {
+  text-align: right;
+}
+
 .markdown-body table th {
   background-color: #1a1b26 !important;
   color: #f5e6c8 !important;
@@ -736,6 +751,28 @@
 
 .markdown-body input[type='checkbox'] {
   margin-right: 8px;
+}
+
+.markdown-body center,
+.markdown-body [align='center'] {
+  text-align: center;
+  display: block;
+}
+
+.markdown-body [align='left'] {
+  text-align: left;
+  display: block;
+}
+
+.markdown-body [align='right'] {
+  text-align: right;
+  display: block;
+}
+
+.markdown-body div,
+.markdown-body section,
+.markdown-body article {
+  margin: 16px 0;
 }
 
 .project-tech-list {
