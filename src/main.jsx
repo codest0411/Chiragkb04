@@ -26,8 +26,10 @@ createRoot(document.getElementById('root')).render(
     <SWRConfig
       value={{
         provider: localStorageProvider,
-        revalidateOnFocus: false,
+        revalidateOnFocus: true,
         revalidateOnReconnect: true,
+        refreshInterval: 30000,
+        dedupingInterval: 2000,
       }}
     >
       <App />
